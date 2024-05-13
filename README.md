@@ -123,6 +123,23 @@ from users</code></pre>
 <pre><code>select max(exp), min(exp), avg(exp)
 from users</code></pre>
 <br/><br/>
+
+
+(3) exp를 100,000 단위로 나누어 단위별 인원 수 계산
+<pre><code>select count(case when exp <= 100000 then '그룹1' end) as '1반', 
+       count(case when exp > 100000 and exp <= 200000 then '그룹2' end) as '2반',
+       count(case when exp > 200000 and exp <= 300000 then '그룹2' end) as '3반',
+       count(case when exp > 300000 and exp <= 400000 then '그룹2' end) as '4반',
+       count(case when exp > 400000 and exp <= 500000 then '그룹2' end) as '5반',
+       count(case when exp > 500000 and exp <= 600000 then '그룹2' end) as '6반',
+       count(case when exp > 600000 and exp <= 700000 then '그룹2' end) as '7반',
+       count(case when exp > 700000 and exp <= 800000 then '그룹2' end) as '8반',
+       count(case when exp > 800000 and exp <= 900000 then '그룹2' end) as '9반',
+       count(case when exp > 900000 then '그룹2' end) as '기타'
+from users</code></pre>
+<br/><br/>
+
+
 ***
 __5. 서버번호별 회원수 분석__
 
