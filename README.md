@@ -2,6 +2,8 @@
 ### 내일배움캠프 SQL 개인학습 정리(csv 파일 2개 분석)
 *** 
 
+![SQL_assignment](https://github.com/inseong0910/sql_final_document_240514/assets/88603039/509313ac-d869-4803-99e7-52dcd6e87445)
+
 #### < USER 유입 및 매출 관련 현황 : 분석 계획 > 
 
 1. USER 가입일자 분석
