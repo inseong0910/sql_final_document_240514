@@ -74,12 +74,14 @@ from basic.users</code></pre>
 
 ***
 __3. LEVEL별 회원수 분석__
+<br/><br/>
 (1) LEVEL별 회원수
 <pre><code>select level, count(level) as "레벨별 인원수"
 from users 
 group by level
 order by level asc</code></pre>
 
+<br/><br/>
 (2) LEVEL 구간별 회원수
 <pre><code>
 # 그룹1 : 레벨1~10 / 그룹2 : 레벨11~20 / ... / 그룹10 : 레벨91~100
