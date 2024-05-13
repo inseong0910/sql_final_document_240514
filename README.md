@@ -2,7 +2,6 @@
 ### 내일배움캠프 SQL 개인학습 정리(csv 파일 2개 분석)
 *** 
 
-![SQL 과제]("C:\Users\USER\Desktop\SQL_assignment.png")
 https://github.com/inseong0910/sql_final_document_240514/issues/1#issue-2293412510
 
 
