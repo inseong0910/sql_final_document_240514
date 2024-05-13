@@ -79,9 +79,10 @@ __3. LEVEL별 회원수 분석__
 from users 
 group by level
 order by level asc</code></pre>
-
+<br/>
 (2) LEVEL 구간별 회원수
-<pre><code># 그룹1 : 레벨1~10 / 그룹2 : 레벨11~20 / ... / 그룹10 : 레벨91~100
+<pre><code><br/>
+# 그룹1 : 레벨1~10 / 그룹2 : 레벨11~20 / ... / 그룹10 : 레벨91~100
 # case when end 사용
 
 select date, game_actor_id, level, 
