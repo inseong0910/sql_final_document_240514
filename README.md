@@ -31,9 +31,31 @@
 1. USER 가입일자 분석
    
    ① 가입일별 가입자수
-   
+select date, count(date)
+from users 
+group by date
+order by date asc
+
+
    ② 연도별 가입자수
+select year(date) as year, count(year(date)) as "연도별 가입자수"
+from users
+group by year 
+order by year asc
+
 
    ③ 월별 가입자수
+select month(date) as month, count(month(date)) as "월별 가입자수"
+from users 
+group by month
+order by month asc
+
 
    ④ 분기별 가입자수 
+select quarter(date) as month, count(quarter(date)) as "분기별 가입자수"
+from users 
+group by month
+order by month asc
+
+
+
