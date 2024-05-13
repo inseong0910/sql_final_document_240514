@@ -28,7 +28,7 @@
 12. 한계점 
 #
 
-1. USER 가입일자 분석
+__1. USER 가입일자 분석__
 <br/>
    ① 가입일별 가입자수
 <pre><code>select date, count(date)
