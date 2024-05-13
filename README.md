@@ -3,7 +3,7 @@
 *** 
 
 <img src="C:/Users/USER/Desktop/SQL_assignment.png">
-
+![SQL_assignment](.C:\Users\USER\Desktop/SQL_assignment.png)
 
 #### < USER 유입 및 매출 관련 현황 : 분석 계획 > 
 
