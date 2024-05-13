@@ -216,14 +216,32 @@ order by date_format(date, '%d')</code></pre>
 <br/><br/>
 ***
 __10. 결제금액 상위 10명, 하위 10명 분석__
-<br/><br/>
+<br/><br/> (1) 결제금액 상위 10명 
+<pre><code># 결제금액 상위 10명은 누구인가?
+select ip_addr, date, u.game_account_id, serverno, pay_amount
+from users u inner join payment p on u.game_account_id = p.game_account_id
+order by pay_amount desc limit 10</code></pre>
+
+<br/><br/> (2) 결제금액 하위 10명 
+<pre><code># 결제금액 하위 10명은 누구인가?
+select ip_addr, date, u.game_account_id, serverno, pay_amount
+from users u inner join payment p on u.game_account_id = p.game_account_id
+order by pay_amount limit 10</code></pre>
 
 ***
 __11. 결제수단별 회원수 & 결제금액 분석__
-<br/><br/>
+<br/><br/> (1) 결제수단별 사용자수  
+<pre><code>select count(u.game_account_id) as "인원수", pay_type
+from users u inner join payment p on u.game_account_id = p.game_account_id
+group by pay_type</code></pre>
+
+<br/><br/> (2) 결제수단별 결제금액 합계   
+<pre><code>select pay_type, sum(pay_amount) as total_pay_amount
+from users u inner join payment p on u.game_account_id = p.game_account_id
+group by pay_type</code></pre>
 
 ***
 __12. 한계점__
-<br/><br/>
-
+<br/><br/> (1) 서브쿼리 사용 부재
+<br/><br/> (2) 윈도우함수 사용 부재
 
