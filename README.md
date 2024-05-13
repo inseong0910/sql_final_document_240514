@@ -39,24 +39,27 @@ order by date asc</code></pre>
 
 
    ② 연도별 가입자수
-select year(date) as year, count(year(date)) as "연도별 가입자수"
+<pre><code>select year(date) as year, count(year(date)) as "연도별 가입자수"
 from users
 group by year 
-order by year asc
+order by year asc</code></pre>
+
 
 
    ③ 월별 가입자수
-select month(date) as month, count(month(date)) as "월별 가입자수"
+<pre><code>select month(date) as month, count(month(date)) as "월별 가입자수"
 from users 
 group by month
-order by month asc
+order by month asc}</code></pre>
+
 
 
    ④ 분기별 가입자수 
-select quarter(date) as month, count(quarter(date)) as "분기별 가입자수"
+<pre><code>select quarter(date) as month, count(quarter(date)) as "분기별 가입자수"
 from users 
 group by month
-order by month asc
+order by month asc</code></pre>
+
 
 
 
