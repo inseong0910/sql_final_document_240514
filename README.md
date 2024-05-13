@@ -102,7 +102,7 @@ from users
 order by level</code></pre>
 ***
 __4. 현재경험치 구간별 회원수 분석__
-(1) exp 최대값, 최소값, 평균
+<br/><br/> (1) exp 최대값, 최소값, 평균
 <pre><code>#exp를 10만 단위로 나누어 그룹별 인원 수 계산
 select game_actor_id, exp, 
 	   case when exp <= 100000 then '그룹1'
