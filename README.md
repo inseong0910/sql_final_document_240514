@@ -74,7 +74,30 @@ from basic.users</code></pre>
 
 ***
 __3. LEVEL별 회원수 분석__
+(1) LEVEL별 회원수
+<pre><code>select level, count(level) as "레벨별 인원수"
+from users 
+group by level
+order by level asc</code></pre>
 
+(2) LEVEL 구간별 회원수
+<pre><code># 그룹1 : 레벨1~10 / 그룹2 : 레벨11~20 / ... / 그룹10 : 레벨91~100
+# case when end 사용
+
+select date, game_actor_id, level, 
+	   case when level <= 10 then '레벨 1~10'
+			when level <= 20 then '레벨 11~20'
+			when level <= 30 then '레벨 21~30'
+			when level <= 40 then '레벨 31~40'
+			when level <= 50 then '레벨 41~50'
+			when level <= 60 then '레벨 51~60'
+			when level <= 70 then '레벨 61~70'
+			when level <= 80 then '레벨 71~80'
+			when level <= 90 then '레벨 81~90'
+			else '레벨 91~100'
+			end as levelgroup
+from users 
+order by level</code></pre>
 ***
 __4. 현재경험치 구간별 회원수 분석__
 
