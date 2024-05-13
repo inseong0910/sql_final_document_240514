@@ -243,5 +243,7 @@ group by pay_type</code></pre>
 ***
 __12. 한계점__
 <br/><br/> (1) 서브쿼리 사용 부재
-<br/><br/> (2) 윈도우함수 사용 부재
+![subquery](https://github.com/inseong0910/sql_final_document_240514/assets/88603039/a0e13749-3a22-4f91-a8cf-d07aa6a32ed5)
 
+<br/><br/> (2) 윈도우함수 사용 부재
+![window_function](https://github.com/inseong0910/sql_final_document_240514/assets/88603039/cffc88c8-dd47-427e-9e38-585f8d552fd4)
