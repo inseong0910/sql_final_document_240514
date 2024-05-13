@@ -158,24 +158,72 @@ order by serverno</code></pre>
 
 ***
 __6. 지역번호별 회원수 분석__
-
+<br/><br/>
+<pre><code>select zone_id, count(zone_id)
+from users
+group by zone_id
+order by zone_id</code></pre>
 ***
 __7. 아이템 획득 경로별 회원수 분석__
-
+<br/><br/>
+<pre><code>select etc_str1 , count(etc_str1)
+from users
+group by etc_str1
+order by etc_str1</code></pre>
 ***
 __8. 아이템 이름별 회원수 분석__
-
+<br/><br/>
+<pre><code>select etc_str2 , count(etc_str2)
+from users
+group by etc_str2
+order by etc_str2</code></pre>
 ***
 __9. 기간별 결제금액 분석__
+<br/><br/> (1) 2015년 총 결제금액
+<pre><code># 2015년 총 결제 금액은?(연도별)
+select year(date) as "연도", sum(p.pay_amount) as "2015년 결제금액 합계"
+from users u inner join payment p on u.game_account_id = p.game_account_id
+where year(u.date) = 2015
+group by year(u.date)</code></pre>
 
+<br/><br/> (2) 연도별 총 결제금액
+<pre><code># 연도별 총 결제 금액은?
+select year(date) as "연도", sum(p.pay_amount) as "연도별 결제금액 합계"
+from users u inner join payment p on u.game_account_id = p.game_account_id
+group by year(u.date)
+order by year(u.date))</code></pre>
+
+<br/><br/> (3) 2015년 1월 총 결제금액
+<pre><code># 2015년 1월 총 결제 금액
+select date_format(date, '%Y-%m') as "년월", sum(pay_amount) as "총 결제금액"
+from users u inner join payment p on u.game_account_id = p.game_account_id
+where date_format(date, '%Y-%m') = '2015-01'
+group by date_format(date, '%Y-%m')</code></pre>
+
+<br/><br/> (4) 월별 총 결제금액 조회 
+<pre><code># 월별 총 결제금액 조회
+select date_format(date, '%Y-%m') as "년월", sum(pay_amount) as "총 결제금액"
+from users u inner join payment p on u.game_account_id = p.game_account_id
+group by date_format(date, '%Y-%m')
+order by date_format(date, '%Y-%m')</code></pre>
+
+<br/><br/> (5) 한 달 중 결제금액이 가장 많은 날짜는? (1일~31일) 
+<pre><code># 매월 중 결제 금액이 가장 많은 날짜는? 
+select date_format(date, '%d') as "날짜", sum(pay_amount) as "총 결제금액"
+from users u inner join payment p on u.game_account_id = p.game_account_id
+group by date_format(date, '%d')
+order by date_format(date, '%d')</code></pre>
+<br/><br/>
 ***
 __10. 결제금액 상위 10명, 하위 10명 분석__
+<br/><br/>
 
 ***
 __11. 결제수단별 회원수 & 결제금액 분석__
+<br/><br/>
 
 ***
 __12. 한계점__
-
+<br/><br/>
 
 
