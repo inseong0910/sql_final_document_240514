@@ -2,7 +2,8 @@
 ### 내일배움캠프 SQL 개인학습 정리(csv 파일 2개 분석)
 *** 
 
-<img src="C:/Users/USER/Desktop/SQL 과제.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="SQL과제"></img><br/>
+![Alt text](https://image-path.blah.com/SQL_assignment.png)
+<img src="C:/Users/USER/Desktop/SQL_assignment.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="SQL과제"></img><br/>
 
 #### < USER 유입 및 매출 관련 현황 : 분석 계획 > 
 
