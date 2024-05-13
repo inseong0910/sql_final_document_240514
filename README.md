@@ -102,7 +102,27 @@ from users
 order by level</code></pre>
 ***
 __4. 현재경험치 구간별 회원수 분석__
+(1) exp 최대값, 최소값, 평균
+<pre><code>#exp를 10만 단위로 나누어 그룹별 인원 수 계산
+select game_actor_id, exp, 
+	   case when exp <= 100000 then '그룹1'
+			when exp <= 200000 then '그룹2'
+			when exp <= 300000 then '그룹3'
+			when exp <= 400000 then '그룹4'
+			when exp <= 500000 then '그룹5'
+			when exp <= 600000 then '그룹6'
+			when exp <= 700000 then '그룹7'
+			when exp <= 800000 then '그룹8'
+			when exp <= 900000 then '그룹9'
+			else '최고'
+			end as '경험치 레벨'
+from users</code></pre>
+<br/><br/>
 
+(2) 최소값 14, 최대값 999,972 이므로 exp를 100,000 단위로 나누어 개별 경험치 등급 표기
+<pre><code>select max(exp), min(exp), avg(exp)
+from users</code></pre>
+<br/><br/>
 ***
 __5. 서버번호별 회원수 분석__
 
