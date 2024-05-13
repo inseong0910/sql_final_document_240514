@@ -2,7 +2,7 @@
 ### 내일배움캠프 SQL 개인학습 정리(csv 파일 2개 분석)
 *** 
 
-<img src="바탕 화면/iSQL 과제.png", height="100x", width="100px">
+<img src="/path/to/img.jpg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
 
 #### < USER 유입 및 매출 관련 현황 : 분석 계획 > 
 
