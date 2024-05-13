@@ -31,10 +31,11 @@
 1. USER 가입일자 분석
    
    ① 가입일별 가입자수
-select date, count(date)
+<pre><code>select date, count(date)
 from users 
 group by date
-order by date asc
+order by date asc</code></pre>
+
 
 
    ② 연도별 가입자수
