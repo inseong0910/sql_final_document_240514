@@ -139,9 +139,22 @@ from users</code></pre>
 from users</code></pre>
 <br/><br/>
 
-
 ***
 __5. 서버번호별 회원수 분석__
+<br/><br/> (1) 전체 데이터 살펴보기
+<pre><code># 전체 데이터 살펴보기
+select *
+from users ;
+
+select *
+from payment ;</code></pre>
+
+<br/><br/> (2) 서버번호별 사용자수
+<pre><code># 서버번호별 유저수
+select serverno, count(serverno)
+from users
+group by serverno
+order by serverno</code></pre>
 
 ***
 __6. 지역번호별 회원수 분석__
