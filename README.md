@@ -68,7 +68,9 @@ order by month asc</code></pre>
 
 ***
 __2. 게임 계정수 분석__
-
+<pre><code>select count(distinct game_account_id)as "중복값 제외",
+count(game_account_id) as "중복값 포함" 
+from basic.users</code></pre>
 
 ***
 __3. LEVEL별 회원수 분석__
