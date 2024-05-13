@@ -50,7 +50,7 @@ order by year asc</code></pre>
 <pre><code>select month(date) as month, count(month(date)) as "월별 가입자수"
 from users 
 group by month
-order by month asc}</code></pre>
+order by month asc</code></pre>
 
 
 <br/>
@@ -60,6 +60,8 @@ from users
 group by month
 order by month asc</code></pre>
 
+
+***
 
 
 
