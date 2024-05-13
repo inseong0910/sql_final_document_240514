@@ -3,6 +3,7 @@
 *** 
 
 ![SQL 과제]("C:\Users\USER\Desktop\SQL_assignment.png")
+https://github.com/inseong0910/sql_final_document_240514/issues/1#issue-2293412510
 
 
 #### < USER 유입 및 매출 관련 현황 : 분석 계획 > 
